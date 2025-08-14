@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "关闭百度广告",
+    "version": "1.0",
+    "description": "去掉百度查询结果中的广告内容",
+    "permissions": ["activeTab"],
+	"browser_action": {
+       "default_icon": "icon128.png"
+    },
+	"icons":{
+		"128": "icon128.png",
+		"48":"icon64.png"
+	},
+    "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": ["https://www.baidu.com/*"],
+			"run_at": "document_end"
+        }
+    ]
+}
